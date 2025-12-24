@@ -15,6 +15,8 @@ To filter out noise (minor taste variations) and capture the dominant flavor str
 ### 3. User Vector Projection
 Since the menu items are mapped to a reduced latent space ($k$-dimensions), the user's raw preference vector ($q$) must be projected into the same space to be comparable.
 
+$$q_{latent} = q \cdot V_k \cdot \Sigma_k^{-1}$$
+
 ### 4. Similarity Measurement
 Once both the menu items and user preferences are in the same latent space, recommendations are ranked using **Cosine Similarity**:
 
